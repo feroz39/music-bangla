@@ -1,0 +1,48 @@
+
+// Typo
+
+*{
+    outline: none;
+    &:focus{
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+body{
+    background-color: $black;
+    color: $white;
+    font-family: $primary_font;
+}
+
+a{
+    color: $white;
+}
+
+.btn-self{
+    color: $white;
+    border-color: $white;
+    border-radius: 40px;
+    padding: 10px 30px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $primary_font;
+    font-weight: 700;
+}
+
+h1{
+    font-size: 52px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 26px;
+}
+h5{
+    font-size: 22px;
+}
