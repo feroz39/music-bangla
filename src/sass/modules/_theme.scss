@@ -13,22 +13,65 @@ body{
     background-color: $black;
     color: $white;
     font-family: $primary_font;
+    overflow-x: hidden;
+    @media only screen and (min-width: 601px){
+        padding-top: 64px;
+    }
 }
 
 a{
-    color: $white;
+    color: $red;
+}
+
+p{
+    font-size: 15px;
+    line-height: 25px;
+    color: darken($white, 20);
+    span{
+        color: $red;
+    }
 }
 
 .btn-self{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: $white;
-    border-color: $white;
+    border-color: $red;
     border-radius: 40px;
-    padding: 10px 30px;
+    padding: 12px 35px;
+    background-color: $red;
+    margin: 5px 0;
+    height: unset;
+    &.btn-dark{
+        background-color: transparent;
+        border: 1px solid $red;
+    }
+    &:hover{
+        background-color: lighten($red, 10);
+    }
+}
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
+    background-color: lighten($red, 10);
 }
 
+@media only screen and (min-width: 993px){
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .container-fluid {
+        width: 100%;
+        padding: 0 15px;
+        max-width: unset;
+    }
+}
 h1,h2,h3,h4,h5,h6{
     font-family: $primary_font;
     font-weight: 700;
+    margin-top: 0px;
 }
 
 h1{

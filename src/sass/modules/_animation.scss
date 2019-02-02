@@ -1,0 +1,11 @@
+.bounce{
+    animation: bounce 1s cubic-bezier(0.11, 0.6, 0.26, 0.86) 0s infinite alternate;
+}
+@keyframes bounce{
+    0%{
+        bottom: 10px;
+    }
+    100% {
+        bottom: 60px;
+    }
+}

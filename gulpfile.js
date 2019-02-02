@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
 gulp.task('sass', ()=>
-    gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/sass/style.scss'])
+    gulp.src(['node_modules/materialize-css/sass/materialize.scss', 'src/sass/style.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
@@ -17,8 +17,7 @@ gulp.task('concat', ()=>
         gulp.src(
             [
                 'node_modules/jquery/dist/jquery.min.js',
-                'node_modules/popper.js/dist/umd/popper.min.js',
-                'node_modules/bootstrap/dist/js/bootstrap.min.js',
+                'node_modules/materialize-css/dist/js/materialize.min.js',
             ])
         .pipe(concat('vendor.js'))
         .pipe(uglify())
